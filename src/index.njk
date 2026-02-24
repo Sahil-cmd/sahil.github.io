@@ -1,0 +1,358 @@
+---
+layout: base.njk
+---
+
+
+    <section id="about" class="home-section">
+        <div class="container">
+
+            <div class="row" itemprop="author" itemscope itemtype="http://schema.org/Person"
+                itemref="person-email person-address">
+
+                <div class="col-xs-12 col-md-4">
+                    <div id="profile">
+
+                        <div class="portrait"
+                            style="background-image: url('{{ person.image }}');
+                            width:200px;
+                            height:220px;"
+                            role="img"
+                            aria-label="{{ person.name }}, {{ person.jobTitle }}">
+                            &nbsp;
+                        </div>
+                        <meta itemprop="image" content="{{ site.url }}{{ person.image }}">
+
+
+                        <div class="portrait-title">
+                            <h2 itemprop="name">{{ person.name }}</h2>
+                            <h3 itemprop="jobTitle">{{ person.jobTitle }}</h3>
+
+                            <h3 itemprop="worksFor" itemscope itemtype="http://schema.org/Organization">
+                                <a href="{{ person.rosUrl }}" target="_blank" rel="noopener noreferrer" itemprop="url">
+                                    <span itemprop="name">{{ person.employer }}</span></a>,
+                                <a href="{{ person.employerUrl }}" target="_blank" rel="noopener noreferrer">{{ person.employerParent }}</a>
+                            </h3>
+
+                        </div>
+
+                        <a href="{{ person.rosUrl }}" target="_blank" rel="noopener noreferrer">
+                            <img src="/img/ROS-AP-logo.png" alt="ROS-Industrial Asia Pacific logo"
+                                 width="190" height="90" style="margin: 1em auto 0; display: block;">
+                        </a>
+
+                        <link itemprop="url" href="{{ site.url }}/">
+
+                        <ul class="social-icon">
+
+                            <li>
+                                <a itemprop="sameAs" href="mailto:{{ person.email }}" aria-label="Email {{ person.name }}">
+                                    <i class="fa fa-envelope big-icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a itemprop="sameAs" href="{{ person.linkedin }}"
+                                    target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile">
+                                    <i class="fa fa-linkedin big-icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a itemprop="sameAs" href="{{ person.github }}"
+                                    target="_blank" rel="noopener noreferrer" aria-label="GitHub profile">
+                                    <i class="fa fa-github big-icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+
+                            <li>
+                                <a itemprop="sameAs" href="{{ person.scholar }}"
+                                    target="_blank" rel="noopener noreferrer" aria-label="Google Scholar profile">
+                                    <i class="fa fa-google big-icon" aria-hidden="true"></i>
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-8" itemprop="description">
+
+
+
+                    <div class="typewriter">
+                        <h1>Hi, I'm Sahil.</h1>
+                    </div>
+
+                    <br>
+
+                    <p>I design and deploy production-grade perception, localization, and
+                    multi-robot fleet systems for autonomous mobile robots in GPS-denied
+                    environments, across warehouse logistics, industrial harbours, and
+                    cleanrooms. My work spans multi-modal 3D vision stacks, SLAM, sensor fusion,
+                    and coverage validation systems, building scalable solutions from state
+                    estimation through to reliable field deployment.</p>
+
+                    <p>Currently a Research Engineer at
+                    <a href="{{ person.rosUrl }}" target="_blank" rel="noopener noreferrer">ROS-Industrial Asia Pacific</a>,
+                    <a href="{{ person.employerUrl }}" target="_blank" rel="noopener noreferrer">A*STAR</a> Singapore,
+                    in the domain of autonomous robotics.
+                    Previously a researcher at
+                    <a href="https://www.sutd.edu.sg/" target="_blank" rel="noopener noreferrer">SUTD</a> with the
+                    <a href="https://smart.mit.edu/" target="_blank" rel="noopener noreferrer">Singapore-MIT Alliance for Research &amp; Technology (SMART)</a>
+                    and the SUTD-MIT International Design Centre (IDC)
+                    in autonomous driving and additive manufacturing.
+                    Peer-reviewed author at IEEE IROS and applied-science journals,
+                    ROS 2 technical trainer, and cross-functional team lead translating
+                    perception research into deployable systems.
+                    I have also taught ROS 2, perception, and machine learning courses
+                    to industrial engineers, technical managers, and university and
+                    polytechnic students.</p>
+
+                    <div class="cta-buttons" style="margin: 1.5em 0 1.5em;">
+                        <a href="#featured-projects" class="btn btn-primary" style="margin-right: 0.5em;">
+                            <i class="fa fa-briefcase"></i> View Projects
+                        </a>
+                        <a href="#contact" class="btn btn-default">
+                            <i class="fa fa-envelope"></i> Let's Connect
+                        </a>
+                    </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-5">
+                                <h3>Core Competencies</h3>
+                                <ul class="ul-interests">
+                                    {% for comp in person.competencies %}
+                                    <li><strong>{{ comp.area }}</strong>: {{ comp.detail }}</li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+
+                            <div class="col-sm-7">
+                                <h3>Education</h3>
+                                <ul class="ul-edu fa-ul">
+                                    {% for edu in person.education %}
+                                    <li style="background-image: url('{{ edu.logo }}');">
+                                        <i class="fa-li fa"></i>
+                                        <div class="description">
+                                            <p class="course">{{ edu.degree }}</p>
+                                            <p class="institution">{{ edu.school }}</p>
+                                        </div>
+                                    </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+
+                        </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+
+
+    <section id="featured-projects" class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 section-heading">
+                    <h2>Featured Project</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12 col-md-6 project-image-col">
+                    <div class="project-image-wrapper">
+                        <picture>
+                            <source srcset="/img/sensorsphere-screenshot.webp" type="image/webp">
+                            <img src="/img/sensorsphere-screenshot.png"
+                                 alt="SensorSphere desktop application showing sensor comparison table with radar chart visualization for LiDAR, camera, and IMU sensors"
+                                 loading="lazy"
+                                 width="2554" height="1540">
+                        </picture>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-md-6">
+                    <h2>SensorSphere</h2>
+                    <p class="project-subtitle"><em>Robot Sensor Hub and Selection Engine</em></p>
+
+                    <p>Open-source desktop tool that cuts sensor integration scoping
+                    from weeks to days for robotics engineers.</p>
+
+                    <ul class="project-features">
+                        <li><strong>50+ validated sensors</strong> across cameras, LiDAR, IMU, and radar</li>
+                        <li>Multi-criteria filtering with interactive radar chart comparison</li>
+                        <li>Automated <strong>ROS 1 / ROS 2 launch file generation</strong></li>
+                        <li>PDF reports, CSV export, and dark/light theme support</li>
+                    </ul>
+
+                    <div class="project-stats-row">
+                        <span class="project-stat"><strong>200+</strong> downloads</span>
+                        <span class="project-stat"><strong>10x</strong> faster scoping</span>
+                        <span class="project-stat"><strong>Apache 2.0</strong> license</span>
+                    </div>
+
+                    <p class="project-tech-stack">Python 3.10+ / PySide6 / Pandas / Matplotlib / Plotly</p>
+
+                    <a href="https://github.com/Sahil-cmd/sensor-sphere" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                        <i class="fa fa-github"></i> View on GitHub
+                    </a>
+                    <a href="/case-studies/sensorsphere/" class="btn btn-default" style="margin-left: 0.5em;">
+                        Read Case Study <i class="fa fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="projects" class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 section-heading">
+                    <h2>Selected Projects</h2>
+                </div>
+
+            <div class="col-xs-12 col-md-8">
+
+                {% for project in projects %}
+                <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
+                    <div class="row">
+                        {% for img in project.images %}
+                        <div class="col-md-12">
+                            <picture>
+                                <source srcset="{{ img | replace('.png', '.webp') }}" type="image/webp">
+                                <img src="{{ img }}" class="pub-banner" itemprop="image"
+                                     alt="{{ project.alts[loop.index0] }}"
+                                     width="{{ project.widths[loop.index0] }}"
+                                     height="{{ project.heights[loop.index0] }}"
+                                     loading="lazy">
+                            </picture>
+                        </div>
+                        {% endfor %}
+                        <div class="col-md-12">
+                            <h3 class="article-title" itemprop="name">{{ project.title | safe }}</h3>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+
+            </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="publications" class="home-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-md-4 section-heading">
+                    <h2>Selected Publications</h2>
+                    <p style="text-align:center">* indicates equal contribution</p>
+                    <p style="text-align:center">For a complete list, see
+                        <a href="{{ person.scholar }}"
+                           target="_blank" rel="noopener noreferrer">Google Scholar</a></p>
+                </div>
+
+                <div class="col-xs-12 col-md-8">
+
+                    {% for pub in publications %}
+                    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
+                        <div class="row">
+                            <div class="col-md-12">
+                                {% if pub.url %}
+                                <a href="{{ pub.url }}"
+                                   target="_blank" rel="noopener noreferrer">
+                                    <picture>
+                                        <source srcset="{{ pub.teaser | replace('.png', '.webp') }}" type="image/webp">
+                                        <img src="{{ pub.teaser }}" class="pub-banner" itemprop="image"
+                                             alt="{{ pub.teaserAlt }}"
+                                             width="{{ pub.teaserWidth }}"
+                                             height="{{ pub.teaserHeight }}"
+                                             loading="lazy">
+                                    </picture>
+                                </a>
+                                {% else %}
+                                <picture>
+                                    <source srcset="{{ pub.teaser | replace('.png', '.webp') }}" type="image/webp">
+                                    <img src="{{ pub.teaser }}" class="pub-banner" itemprop="image"
+                                         alt="{{ pub.teaserAlt }}"
+                                         width="{{ pub.teaserWidth }}"
+                                         height="{{ pub.teaserHeight }}"
+                                         loading="lazy">
+                                </picture>
+                                {% endif %}
+                            </div>
+                            <div class="col-md-12">
+                                <h3 class="article-title" itemprop="name">
+                                    {% if pub.url %}
+                                    <a href="{{ pub.url }}" itemprop="url"
+                                       target="_blank" rel="noopener noreferrer">{{ pub.title }}</a>
+                                    {% else %}
+                                    {{ pub.title }}
+                                    {% endif %}
+                                </h3>
+                                <div class="pub-authors" itemprop="author">
+                                    {{ pub.authors | safe }}
+                                </div>
+                                <div class="pub-publication">
+                                    {{ pub.venue | safe }}
+                                </div>
+                                {% if pub.links.length %}
+                                <div class="pub-links">
+                                    {% for link in pub.links %}
+                                    <a class="btn btn-primary btn-outline btn-xs" href="{{ link.url }}"
+                                       target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+                                    {% endfor %}
+                                </div>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="home-section">
+        <div class="container">
+
+
+            <div class="row">
+                <div class="col-xs-12 col-md-6 section-heading">
+                    <h2>Contact</h2>
+                    <p>Interested in working together? Let's connect.</p>
+                </div>
+                <div class="col-xs-12 col-md-6">
+
+                    <ul class="fa-ul" itemscope>
+
+                        <li>
+                            <i class="fa-li fa fa-envelope fa-2x" aria-hidden="true"></i>
+                            <span id="person-email" itemprop="email"><a
+                                    href="mailto:{{ person.email }}">{{ person.email }}</a></span>
+                        </li>
+
+
+                        <li>
+                            <i class="fa-li fa fa-linkedin fa-2x" aria-hidden="true"></i>
+                            <span id="person-linkedin"><a itemprop="sameAs" href="{{ person.linkedin }}" target="_blank" rel="noopener noreferrer">linkedin.com/in/ersahilpanjwani</a></span>
+                        </li>
+
+
+                        <li>
+                            <i class="fa-li fa fa-map-marker fa-2x" aria-hidden="true"></i>
+                            <span id="person-address" itemprop="address">{{ person.location }}</span>
+                        </li>
+
+
+                    </ul>
+
+                </div>
+            </div>
+
+        </div>
+    </section>

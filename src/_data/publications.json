@@ -1,0 +1,95 @@
+[
+  {
+    "title": "Context and Orientation Aware Path Tracking",
+    "url": "https://doi.org/10.1109/IROS51168.2021.9635922",
+    "authors": "Nicholas Michael B&uuml;nger*, Sahil Panjwani*, Malika Meghjani*, Zefan Huang, Marcelo H. Ang Jr., and Daniela Rus",
+    "venue": "International Conference on Intelligent Robots and Systems (IROS) 2021",
+    "teaser": "/publication/copp/copp_teaser.png",
+    "teaserAlt": "Diagram showing context and orientation aware path tracking for autonomous vehicles",
+    "teaserWidth": 1533,
+    "teaserHeight": 456,
+    "links": [
+      { "label": "Video", "url": "https://youtu.be/WH4pV00VEl4" },
+      {
+        "label": "Paper",
+        "url": "https://doi.org/10.1109/IROS51168.2021.9635922"
+      }
+    ]
+  },
+  {
+    "title": "Design of custom batteries for Soft Robotics",
+    "url": null,
+    "authors": "Sahil Panjwani, Thileepan Stalin, Vincent Joseph, Tien Van Truong, Yue Dong, Dongbin Xiong, Yew Von Lim, Hui Ying Yang, Pablo Valdivia y Alvarado",
+    "venue": "Unpublished",
+    "teaser": "/publication/battery/battery_teaser.png",
+    "teaserAlt": "Custom battery design for soft robotic actuators",
+    "teaserWidth": 1461,
+    "teaserHeight": 768,
+    "links": []
+  },
+  {
+    "title": "Shape memory alloy based 3D printed composite actuators with variable stiffness and large reversible deformation",
+    "url": "https://doi.org/10.1016/j.sna.2021.112598",
+    "authors": "Saeed Akbari*, Amir Hosein Sakhaei*, Sahil Panjwani*, Kavin Kowsari, Qi Ge",
+    "venue": "Sensors and Actuators A: Physical 2021",
+    "teaser": "/publication/sma_smp/sma_smp_teaser.png",
+    "teaserAlt": "Shape memory alloy based 3D printed composite actuator with variable stiffness",
+    "teaserWidth": 1364,
+    "teaserHeight": 337,
+    "links": [
+      { "label": "Paper", "url": "https://doi.org/10.1016/j.sna.2021.112598" }
+    ]
+  },
+  {
+    "title": "Ultrafast three-dimensional printing of optically smooth microlens arrays by oscillation assisted digital light processing",
+    "url": "https://doi.org/10.1021/acsami.9b14692",
+    "authors": "Chao Yuan, Kavin Kowsari, Sahil Panjwani, Zaichun Chen, Dong Wang, Biao Zhang, Colin Ju-Xiang Ng, Pablo Valdivia y Alvarado, and Qi Ge",
+    "venue": "Applied Materials &amp; Interfaces 2019",
+    "teaser": "/publication/lens/lens_teaser.png",
+    "teaserAlt": "Ultrafast 3D printed optically smooth microlens array",
+    "teaserWidth": 986,
+    "teaserHeight": 793,
+    "links": [
+      { "label": "Paper", "url": "https://doi.org/10.1021/acsami.9b14692" }
+    ]
+  },
+  {
+    "title": "Multimaterial 3D Printed Soft Actuators Powered by Shape Memory Alloy Wires",
+    "url": "https://doi.org/10.1016/j.sna.2019.03.015",
+    "authors": "Saeed Akbari*, Amir Hosein Sakhaei*, Sahil Panjwani*, Kavin Kowsari, Ahmad Serjourei, Qi Ge",
+    "venue": "Sensors and Actuators A: Physical 2019",
+    "teaser": "/publication/sma/sma_teaser.png",
+    "teaserAlt": "Multimaterial 3D printed soft actuator powered by shape memory alloy wires",
+    "teaserWidth": 1478,
+    "teaserHeight": 425,
+    "links": [
+      { "label": "Paper", "url": "https://doi.org/10.1016/j.sna.2019.03.015" }
+    ]
+  },
+  {
+    "title": "Miniature Pneumatic Actuators for Soft Robots by High-Resolution Multimaterial 3D Printing",
+    "url": "https://doi.org/10.1002/admt.201900427",
+    "authors": "Yuan-Fang Zhang, Colin Ju-Xiang Ng, Zhe Chen, Wang Zhang, Sahil Panjwani, Kavin Kowsari, Hui Ying Yang, and Qi Ge",
+    "venue": "Advanced Materials Technologies 2019",
+    "teaser": "/publication/miniature_soft_robots/miniature_teaser.png",
+    "teaserAlt": "Miniature pneumatic actuators for soft robots fabricated by high-resolution 3D printing",
+    "teaserWidth": 1200,
+    "teaserHeight": 290,
+    "links": [
+      { "label": "Paper", "url": "https://doi.org/10.1002/admt.201900427" }
+    ]
+  },
+  {
+    "title": "Photopolymer Formulation to Minimize Feature Size, Surface Roughness, and Stair-Stepping in Digital Light Processing-Based Three-Dimensional Printing",
+    "url": "https://doi.org/10.1016/j.addma.2018.10.037",
+    "authors": "Kavin Kowsari, Biao Zhang, Sahil Panjwani, Zaichun Chen, Hardik Hingorani, Saeed Akbari, Nicholas X. Fang, Qi Ge",
+    "venue": "Additive Manufacturing 2018",
+    "teaser": "/publication/photopolymer/photopolymer_teaser.png",
+    "teaserAlt": "Photopolymer formulation for minimizing feature size and surface roughness in DLP 3D printing",
+    "teaserWidth": 1511,
+    "teaserHeight": 362,
+    "links": [
+      { "label": "Paper", "url": "https://doi.org/10.1016/j.addma.2018.10.037" }
+    ]
+  }
+]

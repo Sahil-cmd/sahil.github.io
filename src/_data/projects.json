@@ -1,0 +1,69 @@
+[
+  {
+    "title": "Conceptual Design and Development of a Heart Valve for Pediatric Surgery",
+    "images": ["/projects/ntu_heart.png"],
+    "alts": [
+      "Composite image showing heart valve test rig, 3D printed valve prototypes, surgical tools, and transparent heart model for pediatric surgery research"
+    ],
+    "widths": [1138],
+    "heights": [764]
+  },
+  {
+    "title": "SAE BAJA: Design &amp; Fabrication of an Off-Roader",
+    "images": ["/projects/baja_1.png", "/projects/baja_2.png"],
+    "alts": [
+      "SAE BAJA off-road vehicle: FEA stress analysis, roll cage CAD design, chassis fabrication, and completed vehicle in competition and workshop settings",
+      "SAE BAJA vehicle detail: suspension geometry, drivetrain layout, and field testing on rough terrain"
+    ],
+    "widths": [1541, 1263],
+    "heights": [866, 416]
+  },
+  {
+    "title": "SAE Efficycle: Design &amp; Fabrication of a Three-Wheeled Vehicle with a Hybrid Human-Electric Powertrain",
+    "images": ["/projects/efficycle.png"],
+    "alts": [
+      "SAE Efficycle three-wheeled vehicle with hybrid human-electric powertrain, showing completed vehicle with Manipal University branding alongside CAD design and analysis views"
+    ],
+    "widths": [1236],
+    "heights": [864]
+  },
+  {
+    "title": "Design &amp; Development of Proto Center 1M 3D Printer",
+    "images": ["/projects/3dprinter.png"],
+    "alts": [
+      "Proto Center 1M 3D printer showing frame assembly, mechanical components, and build process"
+    ],
+    "widths": [1495],
+    "heights": [781]
+  },
+  {
+    "title": "Hobby CADs",
+    "images": [
+      "/projects/aston_martin.png",
+      "/projects/yacht_1.png",
+      "/projects/yacht_2.png",
+      "/projects/chopper_1.png",
+      "/projects/chopper_2.png",
+      "/projects/briggs_stratton_engine.png"
+    ],
+    "alts": [
+      "3D CAD renders of an Aston Martin sports car showing body panels, wireframe, photorealistic exterior, and detail views of brakes and wheels",
+      "3D CAD model of a luxury yacht showing exterior hull design, deck layout, and component details",
+      "Photorealistic yacht renders showing ocean scenes, interior cabin views, and marine hardware details",
+      "3D CAD model of a custom chopper motorcycle with wireframe views and component breakdown",
+      "Photorealistic renders of custom chopper motorcycle and exploded engine assembly views",
+      "Detailed CAD model of a Briggs and Stratton engine showing exploded assembly, gears, and machined components"
+    ],
+    "widths": [1461, 1376, 1514, 1296, 1513, 1521],
+    "heights": [854, 803, 861, 726, 734, 780]
+  },
+  {
+    "title": "Other Projects",
+    "images": ["/projects/others.png"],
+    "alts": [
+      "Collage of additional engineering projects including robotics demonstrations, mechanical assemblies, and prototypes"
+    ],
+    "widths": [1401],
+    "heights": [859]
+  }
+]

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="{{ person.name }}">
+    <meta name="description" content="{{ pageDescription or site.description }}">
+    <meta name="keywords" content="{{ site.keywords }}">
+    <meta name="robots" content="index, follow">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:title" content="{{ pageTitle or site.shortTitle }}">
+    <meta property="og:description" content="{{ pageDescription or site.ogDescription }}">
+    <meta property="og:image" content="{{ pageOgImage or (site.url + person.image) }}">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ pageTitle or site.shortTitle }}">
+    <meta name="twitter:description" content="{{ pageDescription or site.twitterDescription }}">
+    <meta name="twitter:image" content="{{ pageOgImage or (site.url + person.image) }}">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "{{ person.name }}",
+        "jobTitle": "{{ person.jobTitle }}",
+        "worksFor": {
+            "@type": "Organization",
+            "name": "Agency for Science, Technology and Research (A*STAR)",
+            "url": "{{ person.employerUrl }}"
+        },
+        "url": "{{ site.url }}",
+        "sameAs": [
+            "{{ person.linkedin | safe }}",
+            "{{ person.scholar | safe }}",
+            "{{ person.github | safe }}"
+        ],
+        "knowsAbout": {{ person.knowsAbout | dump | safe }},
+        "alumniOf": [
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Manipal University"
+            },
+            {
+                "@type": "CollegeOrUniversity",
+                "name": "Nanyang Technological University"
+            }
+        ],
+        "image": "{{ site.url }}{{ person.image }}"
+    }
+    </script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw=="
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw=="
+        crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono&display=swap">
+    <link rel="stylesheet" href="/css/style.css">
+
+    <link rel="icon" type="image/png" href="/img/icon.png">
+    <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+
+    <title>{{ pageTitle or site.title }}</title>
+
+</head>
+
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="90">
+
+    {% include "navbar.njk" %}
+
+    <span id="homepage" style="display: none"></span>
+
+    {{ content | safe }}
+
+    {% include "footer.njk" %}
+
+    <!-- jQuery (required by Bootstrap 3 for mobile nav toggle) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js"
+        integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ=="
+        crossorigin="anonymous"></script>
+    <!-- Bootstrap JS (required for navbar collapse) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ=="
+        crossorigin="anonymous"></script>
+
+    <!-- Refresh scrollspy after all resources load (handles lazy images shifting offsets) -->
+    <script>$(window).on('load', function(){ $('[data-spy="scroll"]').scrollspy('refresh'); });</script>
+
+    {% if site.goatcounter %}
+    <script data-goatcounter="https://{{ site.goatcounter }}.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+    <noscript><img src="https://{{ site.goatcounter }}.goatcounter.com/count?p={{ page.url }}" alt=""></noscript>
+    {% endif %}
+
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+---
+layout: base.njk
+---
+
+    <section class="case-study-page home-section">
+        <div class="container">
+
+            <div class="case-study-nav">
+                <a href="/#featured-projects"><i class="fa fa-arrow-left"></i> Back to Projects</a>
+            </div>
+
+            <header class="case-study-header">
+                <h1>{{ title }}</h1>
+                {% if subtitle %}
+                <p class="case-study-subtitle">{{ subtitle }}</p>
+                {% endif %}
+
+                <div class="case-study-meta">
+                    {% if role %}
+                    <span class="meta-item"><strong>Role:</strong> {{ role }}</span>
+                    {% endif %}
+                    {% if organization %}
+                    <span class="meta-item"><strong>Org:</strong> {{ organization }}</span>
+                    {% endif %}
+                    {% if duration %}
+                    <span class="meta-item"><strong>Period:</strong> {{ duration }}</span>
+                    {% endif %}
+                </div>
+
+                {% if techStack %}
+                <div class="case-study-tech">
+                    {% for tech in techStack %}
+                    <span class="tech-tag">{{ tech }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </header>
+
+            {% if heroImage %}
+            <div class="case-study-hero">
+                <picture>
+                    <source srcset="{{ heroImage }}.webp" type="image/webp">
+                    <img src="{{ heroImage }}.png"
+                         alt="{{ heroAlt or title }}"
+                         width="{{ heroWidth or '' }}"
+                         height="{{ heroHeight or '' }}"
+                         loading="eager">
+                </picture>
+            </div>
+            {% endif %}
+
+            <div class="case-study-body">
+                {{ content | safe }}
+            </div>
+
+            {% if github or paper or demo %}
+            <div class="case-study-links">
+                <h2>Links</h2>
+                {% if github %}
+                <a href="{{ github }}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-github"></i> View on GitHub
+                </a>
+                {% endif %}
+                {% if paper %}
+                <a href="{{ paper }}" class="btn btn-primary btn-outline" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-file-text"></i> Read Paper
+                </a>
+                {% endif %}
+                {% if demo %}
+                <a href="{{ demo }}" class="btn btn-primary btn-outline" target="_blank" rel="noopener noreferrer">
+                    <i class="fa fa-play-circle"></i> Watch Demo
+                </a>
+                {% endif %}
+            </div>
+            {% endif %}
+
+            <div class="case-study-nav case-study-nav-bottom">
+                <a href="/#featured-projects"><i class="fa fa-arrow-left"></i> Back to Projects</a>
+            </div>
+
+        </div>
+    </section>
