@@ -5,9 +5,7 @@ export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy({
     "src/projects/**/*.{png,webp}": "projects",
   });
-  eleventyConfig.addPassthroughCopy({
-    "src/publication/**/*.{png,webp}": "publication",
-  });
+  eleventyConfig.addPassthroughCopy({ "src/publication/": "publication/" });
   eleventyConfig.addPassthroughCopy("src/CNAME");
   eleventyConfig.addPassthroughCopy("src/robots.txt");
   eleventyConfig.addPassthroughCopy("src/.nojekyll");
