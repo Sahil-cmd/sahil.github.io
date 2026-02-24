@@ -5,6 +5,7 @@ exclude = [
   "schema.org",
   "fonts.googleapis.com",
   "fonts.gstatic.com",
+  "^/",
 ]
 
 # 403: publishers block bots but serve browsers; 302: DOI redirects
