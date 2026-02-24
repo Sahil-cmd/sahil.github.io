@@ -1,0 +1,40 @@
+name: Quality Checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build-and-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run build
+
+      - name: Lint CSS
+        run: npx stylelint 'src/css/**/*.css'
+
+      - name: Check formatting
+        run: npx prettier --check 'src/**/*.{css,json}' '*.json' '.github/workflows/*.yml' 'eleventy.config.js'
+
+      - name: Check links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: --config .lychee.toml '_site/**/*.html'
+          fail: true
+
+      - name: Validate HTML
+        run: npx html-validate '_site/**/*.html'
+
+      - name: Accessibility check
+        run: |
+          npx @11ty/eleventy --serve --port=8888 &
+          sleep 5
+          npx pa11y-ci http://localhost:8888/ http://localhost:8888/case-studies/sensorsphere/
+          kill %1
