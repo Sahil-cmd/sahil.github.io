@@ -1,0 +1,15 @@
+# Sites that block automated requests
+exclude = [
+  "linkedin.com",
+  "scholar.google.com",
+  "schema.org",
+  "fonts.googleapis.com",
+  "fonts.gstatic.com",
+]
+
+# 403: publishers block bots but serve browsers; 302: DOI redirects
+accept = [200, 204, 301, 302, 403]
+
+max_redirects = 10
+timeout = 30
+exclude_mail = true
